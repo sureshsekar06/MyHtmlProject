@@ -3,20 +3,14 @@
 		  background-color: #F5F5F5;
 		}
 
-
 #text2
 {
 border: 2px solid rgb(173, 204, 204);
 height: 31px;
-width: 30px;
-box-shadow: 0px 0px 27px rgb(204, 204, 204) inset;
+width: 70%;
+box-shadow: 0px 0px 27px rgb(204, 204, 204);
 transition:500ms all ease;
 padding:3px 3px 3px 3px;
-float:right;
+
 }
-#text2:focus
-{
-width:260px;
-transition:500ms all ease;
-padding:3px 32px 3px 3px;
-}
+

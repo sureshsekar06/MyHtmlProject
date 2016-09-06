@@ -1,21 +1,33 @@
 var app = angular.module('MyApp', ['ngRoute']);
 
 	app.config(function($routeProvider) {
+		
+		console.log("inside show");
+		
 	$routeProvider
-		.when('/ShowName/:uName', {
-			templateUrl: '<h2>Hello {{user_id}}</h2>',
+		.when('/:uName', {
+			
+			templateUrl: 'templates/show_user_Final.html',
+			controller: 'ContactController'
+		})
+		
+		.when('/', {
+			
+			templateUrl: 'indexp.html',
 			controller: 'ContactController'
 		})
 		
 });
 
 	
+        
     app.controller('ContactController',function($scope,$routeParams) {
-               var uid = 1;
+    var uid = 1;
     $scope.contacts = [];
-	$scope.user_id = $routeParams.uName;
+	$scope.user_name = $routeParams.uName;
+	
 	console.log("I m here");
-    
+   
     $scope.saveContact = function() {
         
         if($scope.newcontact.id == null) {
